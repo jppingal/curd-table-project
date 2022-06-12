@@ -1,0 +1,38 @@
+[
+  {
+	"id" : 1,
+    "name": "Harry Potter",
+	"city": "London",
+    "email": "jai@gmail.com",
+    "contact": 1234567891,
+    "age": 23,
+    "gender": "male"
+  },
+  {
+	"id" : 2,
+    "name": "Don Quixote",
+    "city": "Madrid",
+	"email": "jasd@gmail.com",
+    "contact": 123567891,
+    "age": 25,
+    "gender": "female"
+  },
+  {
+	"id" :3,
+    "name": "Joan of Arc",
+    "city": "Paris",
+	"email": "qwe@gmail.com",
+    "contact": 123567891,
+    "age": 28,
+    "gender": "male"
+  },
+  {
+	"id" : 4,
+    "name": "Rosa Park",
+    "city": "Alabama",
+	"email": "aaa@gmail.com",
+    "contact": 123567891,
+    "age": 18,
+    "gender": "female"
+  }
+]
