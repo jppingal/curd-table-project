@@ -3,6 +3,7 @@ import data from "./moke-data.json"
 import { nanoid } from "nanoid";
 import ReadOnlyTableRow from "./components/ReadOnlyTableRow";
 import EditableRow from "./components/EditableTableRow";
+import { getQueriesForElement } from "@testing-library/react";
 import AddContactForm from "./components/AddContactForm";
 const App = () => {
 	const [editContactId, setEditContactId] = useState()
@@ -150,9 +151,37 @@ const App = () => {
 				<button style={{ padding: '10px 20px', backgroundColor: 'green', color: "white", fontWeight: 700 }}
 					onClick={() => setShowAddFormDialog(true)}>Add Details</button>
 			</div>
-			{showAddFormDialog &&
+			{/* {showAddFormDialog &&
+				//<div>hello</div>
 				<AddContactForm />
-			}
+			} */}
+			<div className="form-container ">
+					<form onSubmit={handleAddFormSubmit}>
+						<input className="input-data"
+							type="text" name="name"
+							placeholder="Enter your name..."
+							onChange={handleAddFormChange} />
+						<input className="input-data"
+							type="number" name="age"
+							placeholder="Enter your age..."
+							onChange={handleAddFormChange} />
+						<input className="input-data"
+							type="text"
+							placeholder="Enter your city..."
+							name="city"
+							onChange={handleAddFormChange} />
+						<input className="input-data" type="email" name="email" placeholder="Enter your Email-Id" onChange={handleAddFormChange} />
+						<input className="input-data" type="mobile"
+							name="contact" placeholder="Enter your contact no..." onChange={handleAddFormChange} />
+						<div className="radio-data" onChange={(e) => genderRadioSelected(e)} >
+							<label>Male</label>
+							<input type="radio" value="male" name="gender" />
+							<label>female</label>
+							<input type="radio" value="female" name="gender" />
+						</div>
+						<button className='buttonStyle' type="submit">Add</button>
+					</form>
+				</div>
 		</div>
 	);
 }
